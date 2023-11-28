@@ -1,2 +1,7 @@
 #!/bin/bash
-python3 "$PYFILE"
+python3 -m compileall "$PYFILE"
+base_name=$(echo "$PYFILE" | cut -d'.' -f1)
+new_filename="${base_name}.pyc"
+
+mv "__pycache__/${base_name}".* "$new_filename"
+rm -rf "__pycache__"

@@ -1,3 +1,7 @@
 a.out
 main.py
 cycle
+build
+dist
+main.pyc*
+_*
