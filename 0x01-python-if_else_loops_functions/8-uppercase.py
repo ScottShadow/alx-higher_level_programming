@@ -7,4 +7,4 @@ def uppercase(str):
         if islower(char):
             char = chr(ord(char) - 32)
         print("{}".format(char), end='')
-    print("")
+    print("".format())
