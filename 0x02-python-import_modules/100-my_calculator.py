@@ -18,12 +18,12 @@ def myCalc():
             rez = div(a, b)
         else:
             print("Unknown operator. Available operators: +, -, * and /")
-            return 1
+            sys.exit(1)
         print("{} {} {} = {}".format(a, op, b, rez))
-        return 0
+        sys.exit(0)
     else:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        return 1
+        sys.exit(1)
 
 
 if __name__ == "__main__":
