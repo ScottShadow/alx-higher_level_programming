@@ -10,16 +10,16 @@ def myCalc():
         op = sys.argv[2]
         if op == "+":
             rez = add(a, b)
-        elif sys.argv[2] == "-":
+        elif op == "-":
             rez = sub(a, b)
         elif op == "*":
             rez = mul(a, b)
         elif op == "/":
             rez = div(a, b)
         else:
-            print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+            print("Unknown operator. Available operators: +, -, * and /")
             return 1
-        print(rez)
+        print("{} {} {} = {}".format(a, op, b, rez))
         return 0
     else:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
