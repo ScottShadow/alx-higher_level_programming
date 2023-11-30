@@ -7,16 +7,20 @@ def myCalc():
     if len(sys.argv) == 4:
         a = int(sys.argv[1])
         b = int(sys.argv[3])
-        if sys.argv[2] == "+":
+        op = sys.argv[2]
+        if op == "+":
             rez = add(a, b)
         elif sys.argv[2] == "-":
             rez = sub(a, b)
-        elif sys.argv[2] == "*":
+        elif op == "*":
             rez = mul(a, b)
-        elif sys.argv[2] == "/":
+        elif op == "/":
             rez = div(a, b)
+        else:
+            print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+            return 1
         print(rez)
-        return rez
+        return 0
     else:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         return 1

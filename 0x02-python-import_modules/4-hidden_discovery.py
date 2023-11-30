@@ -1,18 +1,10 @@
 #!/usr/bin/python3
-import imp
-import inspect
 
-# Load the compiled module
-compiled_module = imp.load_compiled(
-    "compiled_module", "path/to/compiled_module.pyc")
+if __name__ == "__main__":
+    """Print all names defined by hidden_4 module."""
+    import hidden_4
 
-# Get the module's members
-module_members = inspect.getmembers(compiled_module)
-
-# Filter out functions
-functions = [name for name, obj in module_members if inspect.isfunction(obj)]
-
-# Print the names of functions
-print("Functions in the module:")
-for function_name in functions:
-    print(function_name)
+    functionNames = dir(hidden_4)
+    for name in functionNames:
+        if name[:2] != "__":
+            print(name)
