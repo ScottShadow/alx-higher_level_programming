@@ -2,3 +2,7 @@
 def print_list_integer(my_list=[]):
     for element in range(0, len(my_list)):
         print("{}".format(my_list[element]))
+
+
+if __name__ == "__main__":
+    print_list_integer()
