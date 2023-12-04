@@ -8,6 +8,7 @@
  * Return: size of the list
  */
 int list_size(listint_t **head)
+
 {
 	ssize_t size = 0;
 	listint_t *temp = *head;
@@ -25,6 +26,7 @@ int list_size(listint_t **head)
  * Return: 1 (True) if the list is a palindrome else 0 (Fail)
  */
 int is_palindrome(listint_t **head)
+
 {
 	int *tempArray = NULL;
 	int *tempArrayPointer = NULL;
