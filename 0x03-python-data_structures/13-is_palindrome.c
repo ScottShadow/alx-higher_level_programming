@@ -2,7 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
-
+/**
+ * list_size - returns the amount of elements in a list
+ * @head: the header node of the list
+ * Return: size of the list
+ */
 int list_size(listint_t **head)
 {
 	ssize_t size = 0;
@@ -15,6 +19,11 @@ int list_size(listint_t **head)
 	}
 	return (size);
 }
+/**
+ * is_palindrome - checks whether a list is a palindrome or not
+ * @head: header node of the list
+ * Return: 1 (True) if the list is a palindrome else 0 (Fail)
+ */
 int is_palindrome(listint_t **head)
 {
 	int *tempArray = NULL;
