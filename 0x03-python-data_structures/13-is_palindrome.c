@@ -34,9 +34,13 @@ int is_palindrome(listint_t **head)
 	listint_t *tempPointer = *head;
 	int isPalindrome = 1;
 
-	if (head)
+	if (head == NULL)
+		return (1);
+	else if (head)
 	{
 		size = list_size(head);
+		if (size == 1)
+			return (isPalindrome);
 		tempArray = malloc(sizeof(int) * size);
 		if (tempArray == NULL)
 			return (0);
