@@ -54,9 +54,10 @@ int is_palindrome(listint_t **head)
 		for (i = 0; i < size / 2; i++)
 		{
 			if (tempArray[i] != tempArray[size - i - 1])
+			{
 				isPalindrome = 0;
-			else
-				isPalindrome = 1;
+				break;
+			}
 		}
 		tempArrayPointer = NULL;
 		free(tempArray);
