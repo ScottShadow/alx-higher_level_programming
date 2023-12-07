@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
-    if search in my_list:
+    if search in my_list and bool(my_list):
         new_list = []
         for element in my_list:
             if element == search:
                 new_list.append(replace)
             else:
                 new_list.append(element)
+        print("success")
         return new_list
