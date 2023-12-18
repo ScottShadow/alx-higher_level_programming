@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    i = 0  # Initialize i outside the loop
+    i = 0
     try:
         for i in range(x):
             print(my_list[i], end="")
@@ -9,8 +9,9 @@ def safe_print_list(my_list=[], x=0):
     except IndexError:
         for i in my_list:
             pass
-        print()
-        return i
+        if x > 0:
+            print()
+            return i
     except Exception as e:
         print(f"Error: {e}")
         return 0
