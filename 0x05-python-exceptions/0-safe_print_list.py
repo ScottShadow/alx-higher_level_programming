@@ -12,3 +12,6 @@ def safe_print_list(my_list=[], x=0):
             rez = rez*10 + i
         print(rez)
         return (i)
+    except UnboundLocalError:
+        print(my_list[0])
+        return (my_list[0])
