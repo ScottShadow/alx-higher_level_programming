@@ -9,11 +9,11 @@ def safe_print_list(my_list=[], x=0):
             print(my_list[i], end="")
             size += 1
         print()
-        return size
+        return (size)
     except IndexError:
         for i in my_list:
             pass
         print()
-        return size
+        return (size)
     except Exception:
         return 0
