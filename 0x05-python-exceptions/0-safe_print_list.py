@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
     rez = 0
+    if x == 0:
+        print(None)
+        return 0
     try:
         for i in range(x):
             rez = rez*10 + my_list[i]
@@ -12,6 +15,3 @@ def safe_print_list(my_list=[], x=0):
             rez = rez*10 + i
         print(rez)
         return (i)
-    except UnboundLocalError:
-        print(my_list[0])
-        return (my_list[0])
