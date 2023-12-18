@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    result = ""
+    rez = 0
     try:
         for i in range(x):
-            result += str(my_list[i])
-        print(result)
-        return int(result)
+            rez = rez*10 + my_list[i]
+        print(rez)
+        return (my_list[i])
     except IndexError:
-        result = "".join(map(str, my_list))
-        print(result)
-        return int(result)
+        rez = 0
+        for i in my_list:
+            rez = rez*10 + i
+        print(rez)
+        return (i)
