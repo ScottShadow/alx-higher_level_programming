@@ -35,18 +35,6 @@ class Square:
         self.__size = value
         return self.__size
 
-    def my_print(self):
-        """Square printer method, prints out the
-            square base on size dimension"""
-        if self.__size == 0:
-            print()
-            return
-        else:
-            for i in range(self.__size):
-                for j in range(self.__size):
-                    print("#", end="")
-                print()
-
     @property
     def position(self):
         """Getter method for position
@@ -59,6 +47,21 @@ class Square:
         Args:
             value: the new value to set to position
         Returns: the new value of positions"""
-        if not isinstance(value, tuple) or len(value) != 2 or not all(isinstance(i, int) for i in value):
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not all(isinstance(i, int) for i in value) or
+                not all(i >= 0 for i in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
+
+    def my_print(self):
+        """Square printer method, prints out the
+            square base on size dimension"""
+        if self.__size == 0:
+            print()
+            return
+        else:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("#", end="")
+                print()
