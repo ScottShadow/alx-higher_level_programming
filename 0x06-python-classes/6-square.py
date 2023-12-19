@@ -5,12 +5,14 @@
 class Square:
     """Square Class Defined"""
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """Constructor Method
         Args:
             size: the size of the side of the square
+            position: the position of the square
             """
         self.size = size
+        self.position = position
 
     def area(self):
         """Method For computing Area
@@ -52,8 +54,8 @@ class Square:
         Returns: the new value of positions"""
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
-                not all(isinstance(i, int) for i in value) or
-                not all(i >= 0 for i in value)):
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -63,8 +65,8 @@ class Square:
         if self.__size == 0:
             print()
             return
-        else:
-            for i in range(self.__size):
-                for j in range(self.__size):
-                    print("#", end="")
-                print()
+        [print("") for i in range(0, self.__position[1])]
+        for i in range(0, self.__size):
+            [print(" ", end="") for j in range(0, self.__position[0])]
+            [print("#", end="") for k in range(0, self.__size)]
+            print("")
