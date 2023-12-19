@@ -9,5 +9,5 @@ def magic_calculation(a, b):
         except:
             result += b + a
             break
-        finally:
-            return result
+
+    return (result)
