@@ -11,14 +11,16 @@ class Square:
 
     def area(self):
         """Method For computing Area
-        Returns: Area, side squared
+        Returns:
+            int: Area, side squared
         """
         return self.__size * self.__size
 
     @property
     def size(self):
         """Getter method for size
-        Returns: value of the variable size of the square
+        Returns:
+            int: value of the variable size of the square
         """
         return self.__size
 
@@ -27,7 +29,8 @@ class Square:
         """Setter method for size
         Args:
             size: the length of the side of the square
-        Returns: value of size"""
+        Returns:
+            int: value of size"""
         if (type(value) is not int):
             raise TypeError("size must be an integer")
         elif (value < 0):
