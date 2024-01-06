@@ -118,4 +118,4 @@ class Rectangle:
         Returns:
           None
         """
-    print("Bye rectangle...")
+        print("Bye rectangle...")
