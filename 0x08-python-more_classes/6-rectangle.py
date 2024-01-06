@@ -96,11 +96,13 @@ class Rectangle:
             return ("")
         if isinstance(self.print_symbol, list):
             symbol_str = '[' + \
-                ', '.join(f"'{item}'" for item in self.print_symbol) + ']'
+                ', '.join(f"'{item}'" for item in self.print_symbol
+                          ) + ']'
         else:
             symbol_str = str(self.print_symbol)
 
-        return ((symbol_str * self.__width) + "\n") * (self.__height - 1) + (symbol_str * self.__width)
+        return ((symbol_str * self.__width) + "\n") * (
+            self.__height - 1) + (symbol_str * self.__width)
 
     def __repr__(self):
         """
