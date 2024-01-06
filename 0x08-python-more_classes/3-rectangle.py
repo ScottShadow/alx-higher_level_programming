@@ -77,14 +77,19 @@ class Rectangle:
 
     def __str__(self):
         """
-        Returns a string representation of the Rectangle, displaying its visual representation.
+        Returns a string representation of the Rectangle, displaying
+        its visual representation.
 
-        The visual representation consists of rows of '#' characters, where each row represents
-        the width of the rectangle, and the height is determined by the value of the height attribute.
+        The visual representation consists of rows of '#' characters,
+          where each row represents
+        the width of the rectangle, and the height is determined by
+        the value of the height attribute.
 
         Returns:
-        str: A string representing the visual representation of the Rectangle.
+        str: A string representing the visual representation of the R
+        ectangle.
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
-        return (("#" * self.__width) + "\n") * (self.__height - 1) + ("#" * self.__width)
+        return (("#" * self.__width) + "\n") * (
+            self.__height - 1) + ("#" * self.__width)
