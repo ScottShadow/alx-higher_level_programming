@@ -142,7 +142,7 @@ class Rectangle:
             rect_2 (Rectangle): The second Rectangle object.
 
         Raises:
-            TypeError: If either rect_1 or rect_2 is not an instance of 
+            TypeError: If either rect_1 or rect_2 is not an instance of
             Rectangle.
 
         Returns:
