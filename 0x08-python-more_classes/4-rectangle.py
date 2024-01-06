@@ -96,11 +96,11 @@ class Rectangle:
 
     def __repr__(self):
         """
-        Returns a string representation of the Rectangle that can be 
+        Returns a string representation of the Rectangle that can be
         used to recreate the object.
 
         Returns:
-        str: A string representing the Rectangle in the format 
+        str: A string representing the Rectangle in the format
         'Rectangle(width, height)'.
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
