@@ -85,4 +85,4 @@ class Rectangle:
         Returns:
         str: A string representing the visual representation of the Rectangle.
         """
-        return (("#" * self.__width) + "\n") * self.__height
+        return (("#" * self.__width) + "\n") * (self.__height - 1) + ("#" * self.__width)
