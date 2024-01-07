@@ -1,0 +1,25 @@
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+#Value Tests
+>>> text_indentation("Hello.")
+Hello.
+<BLANKLINE>
+
+>>> text_indentation("Hello. bro is good.")
+Hello.
+<BLANKLINE>
+bro is good.
+<BLANKLINE>
+
+>>> text_indentation("Again...end")
+Again.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+end
+
+>>> 

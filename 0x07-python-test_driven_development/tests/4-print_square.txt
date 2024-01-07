@@ -1,0 +1,41 @@
+>>> from print_square import print_square
+
+#Value Tests
+
+>>> print_square(2)
+##
+##
+
+>>> print_square(4)
+####
+####
+####
+####
+
+>>> print_square (0)
+
+>>> print_square(2.3)
+##
+##
+
+#Error Tests
+
+>>> print_square(-4) #doctest +ELLIPSIS
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+>>> print_square("lol") #doctest +ELLIPSIS
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+>>> print_square() #doctest +ELLIPSIS
+Traceback (most recent call last):
+  ...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+>>> print_square(None)
+Traceback (most recent call last):
+  ...
+TypeError: size must be an integer

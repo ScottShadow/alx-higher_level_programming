@@ -1,0 +1,43 @@
+>>> from say_my_name import say_my_name
+
+#Value Tests
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+>>> say_my_name("John", ) #doctest +ELLIPSIS
+My name is John 
+
+#Error Tests
+>>> say_my_name(12, "White") #doctest +ELLIPSIS
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name("Black", 10) #doctest +ELLIPSIS
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+#None Value Tests
+>>> say_my_name(None, "White") #doctest +ELLIPSIS
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name("Black", None) #doctest +ELLIPSIS
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+>>> say_my_name(None, None) #doctest +ELLIPSIS
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name() #doctest +ELLIPSIS
+Traceback (most recent call last):
+    ...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
