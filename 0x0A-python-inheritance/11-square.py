@@ -16,6 +16,8 @@ Usage:
 Methods:
     area() - Calculates and returns the area of the square, utilizing
     the area method from the parent class.
+    __str__() - Returns a string representation of the square, including
+    its dimensions.
 """
 rectangle_module = __import__('9-rectangle')
 Rectangle = getattr(rectangle_module, 'Rectangle')
@@ -46,4 +48,8 @@ class Square(Rectangle):
         return super().area()
 
     def __str__(self):
+        """
+        Returns a string representation of the square, including
+        its dimensions.
+        """
         return super().__str__()
