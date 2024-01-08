@@ -20,6 +20,8 @@ Usage:
 
 
 class BaseGeometry:
+    """Defines a basic geometric class, BaseGeometry."""
+
     def area(self):
         """
         Calculate the area of the geometric object.

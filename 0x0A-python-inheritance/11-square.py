@@ -24,6 +24,11 @@ Rectangle = getattr(rectangle_module, 'Rectangle')
 
 
 class Square(Rectangle):
+    """
+    Square - Represents a square with methods for initialization and
+    area calculation.
+    """
+
     def __init__(self, size):
         """
         Constructor method for Square.

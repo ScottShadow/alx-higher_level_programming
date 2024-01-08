@@ -2,8 +2,6 @@
 """
 Rectangle Geometry Module
 
-Defines a Rectangle class inheriting from BaseGeometry.
-
 Classes:
     Rectangle - Represents a rectangle with methods for initialization.
 
@@ -18,6 +16,8 @@ BaseGeometry = getattr(geometry_module, 'BaseGeometry')
 
 
 class Rectangle(BaseGeometry):
+    """Defines a Rectangle class inheriting from BaseGeometry."""
+
     def __init__(self, width, height):
         """
         Constructor method for Rectangle.

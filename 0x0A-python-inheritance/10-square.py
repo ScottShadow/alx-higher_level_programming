@@ -3,11 +3,7 @@
 Square Geometry Module
 
 Defines a Square class inheriting from Rectangle.
-
-Class:
-    Square - Represents a square with methods for initialization and
-    area calculation.
-
+    
 Usage:
     Create an instance of Square, providing a size value.
     Inherited from Rectangle, Square automatically sets the width and
@@ -22,6 +18,11 @@ Rectangle = getattr(rectangle_module, 'Rectangle')
 
 
 class Square(Rectangle):
+    """
+    Square - Represents a square with methods for initialization and
+    area calculation.
+    """
+
     def __init__(self, size):
         """
         Constructor method for Square.
