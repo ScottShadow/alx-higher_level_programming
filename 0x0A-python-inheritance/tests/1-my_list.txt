@@ -19,3 +19,7 @@ TypeError: Contains non-integer elements
 >>> mylist = MyList()
 >>> mylist.append(True)
 >>> mylist.print_sorted()
+[True]
+>>> nonelist = MyList()
+>>> nonelist.print_sorted()
+[]
