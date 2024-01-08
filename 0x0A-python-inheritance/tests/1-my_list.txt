@@ -1,0 +1,21 @@
+>>> my_list_module = __import__('1-my_list')
+>>> MyList = getattr(my_list_module, 'MyList')
+
+#Normal Tests
+>>> mylist = MyList([3, 4, 1, 9])
+>>> print(mylist)
+[3, 4, 1, 9]
+>>> mylist.print_sorted()
+[1, 3, 4, 9]
+
+#Error Tests
+>>> mylist = MyList()
+>>> mylist.append(None)
+>>> mylist.print_sorted() #doctest +ELIPSIS
+Traceback (most recent call last):
+     ...
+TypeError: Contains non-integer elements
+
+>>> mylist = MyList()
+>>> mylist.append(True)
+>>> mylist.print_sorted()
