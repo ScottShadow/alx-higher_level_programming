@@ -8,7 +8,7 @@ Using ``add_integer``
 First, import
 ``0-add_integer`` from the correct module:
 
-    >>> from add_integer import add_integer
+    >>> add_integer= __import__('0-add_integer').add_integer
 
 Now use it:
 
