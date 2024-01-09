@@ -36,11 +36,10 @@ class Rectangle(BaseGeometry):
             TypeError: If width or height is not an integer.
             ValueError: If width or height is less than or equal to 0.
         """
-        base_geometry_instance = BaseGeometry()
-        if base_geometry_instance.integer_validator("width", width):
+        if self.integer_validator("width", width):
             self.width = width
 
-        if base_geometry_instance.integer_validator("height", height):
+        if self.integer_validator("height", height):
             self.height = height
 
     def __str__(self):

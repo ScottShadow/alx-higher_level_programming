@@ -3,7 +3,6 @@
 Square Geometry Module
 
 Defines a Square class inheriting from Rectangle.
-    
 Usage:
     Create an instance of Square, providing a size value.
     Inherited from Rectangle, Square automatically sets the width and
