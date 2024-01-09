@@ -45,7 +45,7 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """Returns a string representation of the rectangle."""
-        return "[{}] {}/{}".format(self.__class__.__name__, self.width, self.height)
+        return f"[{self.__class__.__name__}] {self.width}/{self.height}"
 
     def area(self):
         """Calculates and returns the area of the rectangle."""
