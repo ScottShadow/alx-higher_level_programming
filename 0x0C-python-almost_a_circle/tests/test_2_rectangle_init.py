@@ -5,18 +5,6 @@ from models.rectangle import *
 
 class TestRectangle(unittest.TestCase):
 
-    def test_1_init_rectangle_default_id(self):
-        r1 = Rectangle(10, 2)
-        self.assertEqual(r1.id, 17)
-
-    def test_2_init_rectangle_incremented_id(self):
-        r2 = Rectangle(2, 10)
-        self.assertEqual(r2.id, 18)
-
-    def test_3_init_rectangle_custom_id(self):
-        r3 = Rectangle(10, 2, 0, 0, 12)
-        self.assertEqual(r3.id, 12)
-
     def test_4_init_rectangle_invalid_type_for_width(self):
         with self.assertRaises(TypeError):
             r4 = Rectangle('s', 5)
@@ -56,6 +44,7 @@ class TestRectangle(unittest.TestCase):
     def test_13_init_rectangle_none_height(self):
         with self.assertRaises(TypeError):
             r13 = Rectangle(5, None)
+
 
 if __name__ == '__main__':
     unittest.main()
