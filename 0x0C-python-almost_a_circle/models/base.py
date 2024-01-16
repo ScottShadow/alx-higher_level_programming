@@ -148,7 +148,7 @@ class Base:
         listdict = {}
         with open(filename, 'r+', encoding='utf-8') as f:
             listdict = f.read()
-        newdict = json.loads(listdict)
+        newdict = cls.from_json_string(listdict)
         newlistobj = []
         for obj in newdict:
             newobj = cls.create(**obj)
