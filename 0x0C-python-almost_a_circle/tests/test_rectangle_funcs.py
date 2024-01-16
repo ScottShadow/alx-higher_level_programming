@@ -29,3 +29,7 @@ class TestRectangleMethods(unittest.TestCase):
         r4.display()
         sys.stdout = sys.__stdout__
         self.assertEqual(captured_output.getvalue(), " ###\n ###\n")
+
+
+if __name__ == '__main__':
+    unittest.main()

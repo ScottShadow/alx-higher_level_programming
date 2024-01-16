@@ -119,7 +119,8 @@ class Square(Rectangle):
             None
         """
         if len(args) != 0:
-            for (key, _), arg in zip(self.__dict__.items(), args):
+            attributes = ["id", "width", "x", "y"]
+            for key, arg in zip(attributes, args):
                 setattr(self, key, arg)
         elif len(args) == 0:
             for key, value in kwargs.items():

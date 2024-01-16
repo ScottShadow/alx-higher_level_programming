@@ -56,3 +56,6 @@ class TestRectangle(unittest.TestCase):
     def test_13_init_rectangle_none_height(self):
         with self.assertRaises(TypeError):
             r13 = Rectangle(5, None)
+
+if __name__ == '__main__':
+    unittest.main()

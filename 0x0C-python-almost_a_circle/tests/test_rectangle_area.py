@@ -36,3 +36,6 @@ class TestRectangleArea(unittest.TestCase):
         r6.update(height=4)
         r6.update(width=3, height=2)
         self.assertEqual(r6.area(), 6)
+
+if __name__ == '__main__':
+    unittest.main()
