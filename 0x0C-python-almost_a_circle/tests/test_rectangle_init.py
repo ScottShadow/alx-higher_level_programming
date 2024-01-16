@@ -4,16 +4,14 @@ from models.rectangle import *
 
 
 class TestRectangle(unittest.TestCase):
-    def setUp(self):
-        Base.__nb_objects = 0
 
     def test_1_init_rectangle_default_id(self):
         r1 = Rectangle(10, 2)
-        self.assertEqual(r1.id, 1)
+        self.assertEqual(r1.id, 17)
 
     def test_2_init_rectangle_incremented_id(self):
         r2 = Rectangle(2, 10)
-        self.assertEqual(r2.id, 2)
+        self.assertEqual(r2.id, 18)
 
     def test_3_init_rectangle_custom_id(self):
         r3 = Rectangle(10, 2, 0, 0, 12)
