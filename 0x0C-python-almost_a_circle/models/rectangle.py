@@ -203,7 +203,8 @@ class Rectangle(Base):
                 setattr(self, key, arg)
         elif len(args) == 0:
             for key, value in kwargs.items():
-                setattr(self, key, value)
+                if hasattr(self, key) and isinstance(value, int):
+                    setattr(self, key, value)
 
     def to_dictionary(self):
         """
