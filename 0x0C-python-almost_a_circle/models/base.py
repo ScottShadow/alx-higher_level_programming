@@ -82,7 +82,7 @@ class Base:
             str: A JSON-formatted string.
         """
         if list_dictionaries is None or list_dictionaries == []:
-            return []
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -101,6 +101,8 @@ class Base:
         if list_objs:
             for obj in list_objs:
                 listdict.append(cls.to_dictionary(obj))
+
+        listdict.sort(key=lambda x: x.get('id', 0))
         with open(filename, 'w+', encoding='utf-8') as f:
             f.write(cls.to_json_string(listdict))
 
@@ -116,7 +118,7 @@ class Base:
             list: A list of dictionaries.
         """
         if json_string is None or json_string == "[]":
-            return []
+            return "[]"
         return json.loads(json_string)
 
     @classmethod
