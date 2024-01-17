@@ -117,9 +117,12 @@ class Base:
         Returns:
             list: A list of dictionaries.
         """
-        if json_string is None or json_string == "[]":
-            return "[]"
-        return json.loads(json_string)
+        try:
+            if json_string is None or json_string == "":
+                return []
+            return json.loads(json_string)
+        except json.decoder.JSONDecodeError:
+            return []
 
     @classmethod
     def create(cls, **dictionary):
