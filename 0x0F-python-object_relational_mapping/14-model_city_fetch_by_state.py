@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 PRINTS all City objects
 """
 import sys

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 prints the State object with a name passed in as argument
 """
 import sys

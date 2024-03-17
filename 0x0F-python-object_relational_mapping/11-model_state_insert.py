@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" 
-Prints State object id with the name passed in as argument 
+"""
+Prints State object id with the name passed in as argument
 
 """
 import sys

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 DELETES the State object with a specific name
 """
 import sys

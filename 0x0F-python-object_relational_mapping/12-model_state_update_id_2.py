@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 CHANGES the State object with a specific name and id
 """
 import sys
