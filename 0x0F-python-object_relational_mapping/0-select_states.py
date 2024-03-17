@@ -1,4 +1,24 @@
 #!/usr/bin/python3
-from MYSQLdb import _mysql
-db = _mysql.connect(host="localhost", user="root",
-                    password="root", database="hbtn_0e_0_usa")
+"""  lists all states from the database hbtn_0e_0_usa """
+import sys
+import MySQLdb
+
+if __name__ == "__main__":
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+    db = MySQLdb.connect(
+        host="localhost",
+        user=username,
+        passwd=password,
+        db=database
+    )
+    cursor = db.cursor()
+
+    cursor.execute("SELECT * FROM states")
+
+    results = cursor.fetchall()
+    for row in results:
+        print(row)
+
+    db.close()
