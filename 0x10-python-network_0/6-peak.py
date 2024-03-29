@@ -7,7 +7,8 @@ def find_peak(list_of_integers):
     Find the peak element in a list of integers using binary search.
 
     Args:
-        list_of_integers (List[int]): A list of integers to search for the peak.
+        list_of_integers (List[int]): A list of integers to search
+        for the peak.
 
     Returns:
         int: The peak element in the list.
