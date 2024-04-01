@@ -3,8 +3,9 @@
 import sys
 import urllib.request
 
-URL = sys.argv[1]
+
 if __name__ == "__main__":
+    URL = sys.argv[1]
     try:
         with urllib.request.urlopen(URL) as response:
             print(response.read().decode('utf-8'))
