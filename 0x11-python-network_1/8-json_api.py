@@ -12,9 +12,9 @@ if __name__ == "__main__":
     q = "" if len(sys.argv) < 2 else sys.argv[1]
     URL = 'http://0.0.0.0:5000/search_user'
     DATA = {'q': q}
-    RESULT = requests.post(URL, data=DATA, timeout=5)
 
     try:
+        RESULT = requests.post(URL, data=DATA, timeout=5)
         RESULT_JSON = RESULT.json()
         if RESULT_JSON:
             print(f"[{RESULT_JSON.get('id')}] {RESULT_JSON.get('name')}")
@@ -22,3 +22,5 @@ if __name__ == "__main__":
             print("No result")
     except JSONDecodeError:
         print("Not a valid JSON")
+    except Exception as e:
+        print(f"Error code: {e}")
