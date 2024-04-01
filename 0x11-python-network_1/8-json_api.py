@@ -22,5 +22,3 @@ if __name__ == "__main__":
             print("No result")
     except JSONDecodeError:
         print("Not a valid JSON")
-    except KeyError:
-        print("No result")
