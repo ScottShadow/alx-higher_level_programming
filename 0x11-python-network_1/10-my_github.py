@@ -6,14 +6,15 @@ to display your id
 import sys
 from requests.auth import HTTPBasicAuth
 import requests
-
-URL = 'https://api.github.com/user'
-USERNAME = sys.argv[1]
-PASSWORD = sys.argv[2]
-DATA = {'username': USERNAME, 'password': PASSWORD}
-RESULT = requests.get(URL, auth=HTTPBasicAuth(USERNAME, PASSWORD), timeout=5)
-RESULTJSON = RESULT.json()
-try:
-    print(RESULTJSON.get('id'))
-except KeyError:
-    print("None")
+if __name__ == "__main__":
+    URL = 'https://api.github.com/user'
+    USERNAME = sys.argv[1]
+    PASSWORD = sys.argv[2]
+    DATA = {'username': USERNAME, 'password': PASSWORD}
+    RESULT = requests.get(URL, auth=HTTPBasicAuth(
+        USERNAME, PASSWORD), timeout=5)
+    RESULTJSON = RESULT.json()
+    try:
+        print(RESULTJSON.get('id'))
+    except KeyError:
+        print("None")
