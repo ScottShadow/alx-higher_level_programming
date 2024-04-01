@@ -19,6 +19,6 @@ size = len(RESULTS_JSON)
 for i in range(0, 10):
     if i >= size:
         break
-    sha = RESULTS_JSON[i]['sha']
-    name = RESULTS_JSON[i]['commit']['author']['name']
+    sha = RESULTS_JSON[i].get('sha')
+    name = RESULTS_JSON[i].get('commit').get('author').get('name')
     print(f'{sha}: {name}')

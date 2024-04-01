@@ -16,8 +16,8 @@ RESULT = requests.post(URL, data=DATA, timeout=5)
 try:
     RESULT_JSON = RESULT.json()
     if RESULT_JSON:
-        print(f"[{RESULT_JSON['id']}] {RESULT_JSON['name']}")
+        print(f"[{RESULT_JSON.get('id')}] {RESULT_JSON.get('name')}")
     else:
         print("No result")
-except JSONDecodeError as e:
+except JSONDecodeError:
     print("Not a valid JSON")
